@@ -1,0 +1,104 @@
+
+.navbar {
+  background-color: var(--cl-secondary);
+  color: var(--cl-white);
+  transition: .5s all ease;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  &.active {
+    background-color: var(--cl-white);
+    color: var(--cl-black);
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .logo {
+      font-size: 34px;
+      font-weight: bold;
+
+      .dot {
+        color: var(--cl-primary);
+      }
+    }
+
+    .links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        position: relative;
+
+        img {
+          width: 32px;
+          height: 32px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        .options {
+          position: absolute;
+          top: 50px;
+          right: 0;
+          padding: 20px;
+          background-color: var(--cl-white);
+          border-radius: 10px;
+          border: 1px solid lightgray;
+          display: flex;
+          flex-direction: column;
+          color: gray;
+          width: 200px;
+          font-weight: 300;
+
+          a {
+            padding: 5px;
+
+            &:hover {
+              color: var(--cl-primary);
+            }
+          }
+        }
+      }
+
+      button {
+        color: var(--cl-white);
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid white;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--cl-primary);
+          border-color: var(--cl-primary);
+        }
+      }
+    }
+  }
+
+  hr {
+    height: 0;
+    border: 0.5px solid var(--cl-gray);
+  }
+  .menu {
+    font-weight: 300;
+    color: gray;
+    font-family: "Montserrat", sans-serif;
+
+    .container {
+      padding: 10px 0;
+    }
+  }
+}
