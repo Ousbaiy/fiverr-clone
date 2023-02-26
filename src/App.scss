@@ -4,11 +4,21 @@
   --cl-white: #fff;
   --cl-black: #000;
   --cl-gray: #ebe9e9;
+  --cl-heading: #404145;
+  --cl-pColor: #62646a;
 }
 
 .container {
   width: min(100% - clamp(3rem, 5vw + 1.25rem, 4.375rem), 1050px);
   margin: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
 }
 
 * {

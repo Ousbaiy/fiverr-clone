@@ -1,8 +1,7 @@
-
 .navbar {
   background-color: var(--cl-secondary);
   color: var(--cl-white);
-  transition: .5s all ease;
+  transition: 0.5s all ease;
   position: sticky;
   top: 0;
   width: 100%;
@@ -99,6 +98,13 @@
 
     .container {
       padding: 10px 0;
+    }
+
+    .menuLink {
+      color: var(--cl-pColor);
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
     }
   }
 }
