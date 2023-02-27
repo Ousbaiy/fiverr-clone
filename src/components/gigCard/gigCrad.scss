@@ -1,7 +1,7 @@
 .gigCard {
   width: 300px;
   height: 370px;
-  border: 1px solid lightgray;
+  border: 1px solid rgb(233, 230, 230);
   margin-bottom: 20px;
 
   img {
@@ -40,7 +40,7 @@
       img {
         width: 14px;
         height: 14px;
-        background-color: #ffc108;
+        color: #ffc108;
       }
 
       span {
@@ -53,7 +53,7 @@
 
   hr {
     height: 0;
-    border: .5px solid lightgray;
+    border: .5px solid rgb(233, 230, 230);
   }
 
   .details {
@@ -66,6 +66,7 @@
       width: 16px;
       height: 16px;
       cursor: pointer;
+      
     }
 
     .price {
@@ -75,8 +76,9 @@
         font-size: 12px;
       }
 
-      h2 {
-        color: var(--cl-heading);
+      h3 {
+        margin-top: 3px;
+        color: var(--cl-primary);
         font-size: 18px;
       }
     }

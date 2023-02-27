@@ -131,7 +131,7 @@ export const gigs = [
     id: 3,
     img: "https://images.pexels.com/photos/8797307/pexels-photo-8797307.jpeg?auto=compress&cs=tinysrgb&w=1600",
     pp: "https://images.pexels.com/photos/1062280/pexels-photo-1062280.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    desc: "I will creating unique ai generated artworks mid journey ai artist",
+    desc: "I am creating unique ai generated artworks mid journey ai artist",
     price: 112,
     star: 5,
     username: "Carol Steve",
