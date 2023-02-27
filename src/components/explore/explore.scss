@@ -4,10 +4,9 @@
   padding: 100px 0px;
 
   .container {
-    // width: 1400px;
 
     h1{
-      color: #555;
+      color: var(--cl-heading);
     }
 
     .items {

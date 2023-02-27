@@ -6,7 +6,6 @@ const Navbar = () => {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
   const userRef = useRef(null);
-
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -21,27 +20,27 @@ const Navbar = () => {
     };
   }, [userRef]);
 
+  // ? telling the browser scroll event handler won't call preventDefault() by adding { passive: true }
   useEffect(() => {
     const isActive = () => {
       window.scrollY > 0 ? setActive(true) : setActive(false);
     };
-    window.addEventListener("scroll", isActive);
+    window.addEventListener("scroll", isActive, { passive: true });
     return () => {
-      window.removeEventListener("scroll", isActive);
+      window.removeEventListener("scroll", isActive, { passive: true });
     };
   }, []);
 
-  const currentUser = {
-    id: 1,
-    username: "Malich",
-    isSeller: true,
-  };
+  // const currentUser = {
+  //   id: 1,
+  //   username: "Malich",
+  //   isSeller: true,
+  // } ;
+
+  const currentUser = null;
 
   return (
-    <nav
-      
-      className={active || pathname !== "/" ? "navbar active" : "navbar"}
-    >
+    <nav className={active || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
           <Link to="/" className="link">
@@ -53,9 +52,13 @@ const Navbar = () => {
           <span>Fiverr Business</span>
           <span>Explore</span>
           <span>English</span>
-          {!currentUser && <span>Sign in</span>}
           {!currentUser?.isSeller && <span>Become a Seller</span>}
-          {!currentUser && <button>Join</button>}
+          {!currentUser && <span>Sign in</span>}
+          {!currentUser && (
+            <Link to="/register">
+              <button className="join">Join</button>
+            </Link>
+          )}
           {currentUser && (
             <div ref={userRef} className="user" onClick={() => setOpen(!open)}>
               <img
