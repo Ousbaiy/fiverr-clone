@@ -10,6 +10,10 @@
       justify-content: space-between;
       align-items: center;
 
+      h1 {
+        color: var(--cl-heading);
+      }
+
       button {
         background-color: var(--cl-primary);
         color: var(--cl-white);

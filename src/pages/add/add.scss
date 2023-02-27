@@ -1,0 +1,53 @@
+.add {
+  .container {
+    padding: 50px 0px;
+
+    h1 {
+      margin-bottom: 30px;
+      color: var(--cl-heading);
+    }
+
+    .sections {
+      display: flex;
+      justify-content: space-between;
+      gap: 100px;
+
+      label {
+        color: #555;
+        font-size: 18px;
+      }
+
+      .info,
+      .details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
+
+        input,
+        select,
+        textarea {
+          caret-color: var(--cl-primary);
+          font-size: 18px;
+          padding: 20px;
+          resize: none;
+        }
+
+        button {
+          border: none;
+          padding: 20px;
+          color: var(--cl-white);
+          font-weight: 500;
+          font-size: 18px;
+          background-color: var(--cl-primary);
+          cursor: pointer;
+
+          &:hover {
+            background-color: #19a463;
+          }
+        }
+      }
+    }
+  }
+}

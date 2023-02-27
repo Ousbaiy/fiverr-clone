@@ -1,10 +1,12 @@
 import React from "react";
 import "./gig.scss";
 import { Slider } from "infinite-react-carousel/lib";
+import ScrollToTop from "../../components/ScrollToTop"
 
 function Gig() {
   return (
     <div className="gig">
+      <ScrollToTop />
       <div className="container">
         <div className="left">
           <span className="breadcrumbs">

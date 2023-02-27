@@ -1,0 +1,54 @@
+.messages {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  .container {
+    padding: 50px 0;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        color: var(--cl-heading);
+      }
+    }
+
+    table {
+      width: 100%;
+
+      tr {
+        height: 100px;
+
+        td {
+          padding: 10px;
+
+          &:first-child {
+            font-weight: 500;
+          }
+
+          &:nth-child(2),
+          &:nth-child(3) {
+            color: var(--cl-pColor);
+          }
+
+          button {
+            background-color: var(--cl-primary);
+            color: var(--cl-white);
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+          }
+        }
+
+        &.active {
+          background-color: #8fe99a43;
+        }
+      }
+    }
+  }
+}

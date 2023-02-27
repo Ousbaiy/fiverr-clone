@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollToTop from "../../components/ScrollToTop";
 import "./orders.scss";
 
 const Orders = () => {
@@ -10,6 +11,7 @@ const Orders = () => {
 
   return (
     <div className="orders">
+      <ScrollToTop />
       <div className="container">
         <div className="title">
           <h1>Orders</h1>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./gigs.scss";
 import { gigs } from "../../data"
 import GigCard from "../../components/gigCard/GigCard"
+import ScrollToTop from "../../components/ScrollToTop";
 
 const Gigs = () => {
   const [open, setOpen] = useState(false);
@@ -14,6 +15,7 @@ const Gigs = () => {
 
   return (
     <div className="gigs">
+      <ScrollToTop />
       <div className="container">
         <span className="creadcrumbs">
           FIVERR {">"} GRAPHICS & DESIGN {">"}

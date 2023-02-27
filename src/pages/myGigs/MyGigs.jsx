@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ScrollToTop from "../../components/ScrollToTop";
 import "./myGigs.scss";
 
 function MyGigs() {
@@ -10,6 +11,7 @@ function MyGigs() {
 
   return (
     <div className="myGigs">
+      <ScrollToTop />
       <div className="container">
         <div className="title">
           <h1>{currentUser.isSeller ? "Gigs" : "Orders"}</h1>

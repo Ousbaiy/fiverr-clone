@@ -33,6 +33,14 @@
       font-weight: 500;
       font-family: "Montserrat", sans-serif;
 
+      span {
+        cursor: pointer;
+        transition: .3s all;
+        &:hover {
+          color: var(--cl-primary);
+        }
+      }
+
       .user {
         display: flex;
         align-items: center;
@@ -95,6 +103,7 @@
     font-weight: 300;
     color: gray;
     font-family: "Montserrat", sans-serif;
+    
 
     .container {
       padding: 10px 0;
