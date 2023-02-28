@@ -42,6 +42,35 @@
       font-weight: 500;
       font-family: "Montserrat", sans-serif;
 
+      
+
+      .langOption {
+        position: absolute;
+        top: 70px;
+        right: 145px;
+        padding: 20px 0;
+        background-color: var(--cl-white);
+        border-radius: 10px;
+        border: 1px solid lightgray;
+        display: flex;
+        flex-direction: column;
+        color: gray;
+        width: 200px;
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        z-index: 3;
+
+        span {
+          padding: 10px;
+
+          &:hover {
+            background-color: var(--cl-gray);
+            color: var(--cl-pColor);
+          }
+        }
+      }
+
       span {
         cursor: pointer;
         transition: 0.3s all;
@@ -134,7 +163,7 @@
         background: var(--cl-primary);
         left: 50%;
         transform: translateX(-50%);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         width: 0;
       }
 

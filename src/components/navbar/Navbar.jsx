@@ -5,6 +5,7 @@ import "./navbar.scss";
 const Navbar = () => {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
+  const [language, setLanguae] = useState(false);
   const userRef = useRef(null);
   const { pathname } = useLocation();
 
@@ -31,13 +32,13 @@ const Navbar = () => {
     };
   }, []);
 
-  // const currentUser = {
-  //   id: 1,
-  //   username: "Malich",
-  //   isSeller: true,
-  // } ;
+  const currentUser = {
+    id: 1,
+    username: "Malich",
+    isSeller: true,
+  };
 
-  const currentUser = null;
+  // const currentUser = null;
 
   return (
     <nav className={active || pathname !== "/" ? "navbar active" : "navbar"}>
@@ -51,7 +52,17 @@ const Navbar = () => {
         <div className="links">
           <span>Fiverr Business</span>
           <span>Explore</span>
-          <span>English</span>
+          <span className="lang" onClick={() => setLanguae(!language)}>English</span>
+          {language && (
+            <div className="langOption">
+              <span>Deutsch</span>
+              <span>Español</span>
+              <span>Francais</span>
+              <span>Português</span>
+              <span>Italiano</span>
+              <span>Nederlands</span>
+            </div>
+          )}
           {!currentUser?.isSeller && <span>Become a Seller</span>}
           {!currentUser && <span>Sign in</span>}
           {!currentUser && (
