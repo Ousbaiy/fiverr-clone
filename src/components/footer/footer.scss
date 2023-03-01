@@ -1,6 +1,6 @@
+@import "../../App.scss";
 .footer {
   .container {
-
     img {
       width: 24px;
       height: 24px;
@@ -9,10 +9,26 @@
 
     .top {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px , 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 10px;
 
       .box {
+        .title {
+          display: flex;
+          justify-content: space-between;
+
+          img {
+            display: none;
+            transition: transform 0.3s ease-in-out;
+
+            &.rotate {
+              transform: rotate(180deg);
+            }
+            @include mobile {
+              display: block;
+            }
+          }
+        }
 
         h5 {
           color: var(--cl-heading);
@@ -20,15 +36,27 @@
           padding-bottom: 20px;
         }
 
-        li {
-          color: var(--cl-pColor);
-          padding-bottom: 16px;
-          cursor: pointer;
+        ul {
+          overflow: hidden;
+          transition: max-height 0.3s ease-in-out;
+          max-height: 500px;
 
-          &:hover {
-            text-decoration: underline;
+          @include mobile {
+            &.hide {
+              max-height: 0;
+            }
           }
-          
+
+          li {
+            transition: all 0.3s;
+            color: var(--cl-pColor);
+            padding-bottom: 16px;
+            cursor: pointer;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
     }
@@ -37,32 +65,41 @@
       background-color: var(--cl-gray);
       margin-top: 50px;
     }
-  
+
     .bottom {
       padding: 20px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      .left{
+      @include tablet {
+        gap: 15px;
+        flex-direction: column;
+      }
+
+      .left {
         display: flex;
         align-items: center;
         gap: 20px;
 
         h2 {
           color: var(--cl-pColor);
-          
         }
 
         span {
           color: var(--cl-pColor);
-          opacity: .7;
+          opacity: 0.7;
         }
       }
-      .right{
+      .right {
         display: flex;
         align-items: center;
         gap: 30px;
+
+        @include tablet {
+          gap: 10px;
+          flex-direction: column;
+        }
 
         .socials {
           display: flex;
@@ -70,10 +107,15 @@
           gap: 10px;
         }
 
-        .link {
+        .box {
           display: flex;
-          align-items: center;
           gap: 10px;
+
+          .link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
         }
       }
     }

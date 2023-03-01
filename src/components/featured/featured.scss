@@ -1,3 +1,4 @@
+@import "../../App.scss";
 .featured {
   height: 500px;
   display: flex;
@@ -5,11 +6,19 @@
   background-color: var(--cl-secondary);
   color: var(--cl-white);
 
+  @include mobile {
+    height: 350px;
+  }
+
   .container {
     display: flex;
     align-items: center;
     // gap: 50px;
     justify-content: space-between;
+
+    @include tablet {
+      justify-content: center;
+    }
 
     .left {
       display: flex;
@@ -19,6 +28,11 @@
       h1 {
         max-width: 600px;
         font-size: 50px;
+
+        @include mobile {
+          font-size: 32px;
+          max-width: 300px;
+        }
 
         i {
           font-weight: 300;
@@ -33,6 +47,13 @@
         background-color: var(--cl-white);
         border-radius: 5px;
 
+        @include mobile {
+          background-color: transparent;
+          flex-direction: column;
+          gap: 10px;
+          align-items: normal;
+        }
+
         .searchInput {
           display: flex;
           align-items: center;
@@ -40,9 +61,18 @@
           flex-grow: 1;
           margin-left: 15px;
 
+          @include mobile {
+            background-color: var(--cl-white);
+            margin-left: 0;
+          }
+
           img {
             width: 20px;
             height: 20px;
+
+            @include mobile {
+              margin-left: 15px;
+            }
           }
 
           input {
@@ -51,6 +81,7 @@
             font-size: 16px;
             padding: 10px;
             flex: 1;
+
           }
         }
 
@@ -66,6 +97,11 @@
           cursor: pointer;
           transition: all 0.3s ease-in-out;
 
+          @include mobile {
+            width: inherit;
+            border-radius: 5px;
+          }
+
           &:hover {
             background-color: #19a463;
           }
@@ -76,6 +112,10 @@
         display: flex;
         align-items: center;
         gap: 10px;
+
+        @include mobile {
+          display: none;
+        }
 
         button {
           color: var(--cl-white);
@@ -97,6 +137,10 @@
 
     .right {
       height: 100%;
+
+      @include tablet {
+        display: none;
+      }
       img {
         width: 500px;
         object-fit: contain;

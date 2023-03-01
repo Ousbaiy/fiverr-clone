@@ -182,3 +182,74 @@ export const gigs = [
     username: "Wilton Hunt",
   },
 ];
+
+export const sections = [
+  {
+    title: "Category",
+    items: [
+      "Graphics & Design",
+      "Digital Marketing",
+      "Writing & Translation",
+      "Video & Animation",
+      "Music & Audio",
+      "Programming & Tech",
+      "Data",
+      "Business",
+      "Lifestyle",
+      "Photography",
+      "Sitemap",
+    ],
+  },
+  {
+    title: "About",
+    items: [
+      "Careers",
+      "Press & News",
+      "Partnerships",
+      "Privacy Policy",
+      "Terms of Service",
+      "Intellectual Property Claims",
+      "Investor Relations",
+    ],
+  },
+  {
+    title: "Support",
+    items: [
+      "Help & Support",
+      "Trust & Safety",
+      "Selling on Fiverr",
+      "Buying on Fiverr",
+    ],
+  },
+  {
+    title: "Community",
+    items: [
+      "Customer Success Stories",
+      "Community hub",
+      "Forum",
+      "Events",
+      "Blog",
+      "Influencers",
+      "Affiliates",
+      "Podcast",
+      "Invite a Friend",
+      "Become a Seller",
+      "Community Standards",
+    ],
+  },
+  {
+    title: "More from Fiverr",
+    items: [
+      "Fiverr Business",
+      "Fiverr Pro",
+      "Fiverr Logo Maker",
+      "Fiverr Guides",
+      "Get Inspired",
+      "Fiverr Select",
+      "ClearVoice",
+      "Fiverr Workspace",
+      "Learn",
+      "Working Not Working",
+    ],
+  },
+];

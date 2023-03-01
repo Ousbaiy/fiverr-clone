@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 .navbar {
   background-color: var(--cl-secondary);
   color: var(--cl-white);
@@ -41,7 +43,6 @@
       align-items: center;
       font-weight: 500;
       font-family: "Montserrat", sans-serif;
-
       
 
       .langOption {
@@ -72,10 +73,24 @@
       }
 
       span {
+        @include mobile {
+          display: none;
+        }
         cursor: pointer;
         transition: 0.3s all;
         &:hover {
           color: var(--cl-primary);
+        }
+      }
+
+      .menu {
+        display: none;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+
+        @include mobile {
+          display: block;
         }
       }
 
@@ -146,6 +161,10 @@
 
     .container {
       padding: 10px 0;
+
+      @include tablet {
+        display: none;
+      }
     }
 
     .menuLink {

@@ -2,7 +2,7 @@ import "./services.scss";
 
 const Services = () => {
   return (
-    <div className="features">
+    <div className="services">
       <div className="container">
         <div className="item">
           <h2>A whole world of freelance talent at your fingertips</h2>

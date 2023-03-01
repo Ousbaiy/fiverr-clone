@@ -1,10 +1,12 @@
+@import "../../App.scss";
+
 .trustedBy {
   background-color: #fafafa;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   .container {
     display: flex;
     align-items: center;
@@ -13,10 +15,21 @@
     color: lightgray;
     font-weight: 500;
 
-    // img {
-    //   max-width: 50px;
-    //   object-fit: contain;
-    // }
-  }
+    @include mobile {
+      gap: 10px;
+    }
 
+    span {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    img {
+      @include mobile {
+        max-width: 50px;
+        object-fit: contain;
+      }
+    }
+  }
 }

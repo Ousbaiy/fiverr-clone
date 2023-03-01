@@ -1,3 +1,4 @@
+@import "../../App.scss";
 .business {
   padding: 96px 0;
   background-color: #0d084d;
@@ -5,6 +6,10 @@
   .container {
     display: flex;
     gap: 50px;
+
+    @include tablet {
+      flex-direction: column;
+    }
 
     .item {
       flex: 1;

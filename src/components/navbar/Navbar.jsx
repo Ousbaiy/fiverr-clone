@@ -32,6 +32,10 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleMenubar = () => {
+    //write code for nav bar
+  }
+
   const currentUser = {
     id: 1,
     username: "Malich",
@@ -102,6 +106,7 @@ const Navbar = () => {
               )}
             </div>
           )}
+          <img className="menu" src="./img/burger-icon.png" alt="burger-icon" onClick={handleMenubar}/>
         </div>
       </div>
       {(active || pathname !== "/") && (

@@ -1,13 +1,18 @@
-.features {
+@import "../../App.scss"; 
+.services {
   margin-top: 40px;
   background-color: #f1fdf7;
-
   padding: 100px 0;
+
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 70px;
+
+    @include tablet {
+      flex-direction: column;
+    }
 
     .item {
       display: flex;

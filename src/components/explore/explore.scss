@@ -1,12 +1,17 @@
+@import "../../App.scss";
+
 .explore {
   display: flex;
   justify-content: center;
   padding: 100px 0px;
 
   .container {
-
-    h1{
+    h1 {
       color: var(--cl-heading);
+
+      @include mobile {
+        font-size: 30px;
+      }
     }
 
     .items {
@@ -26,24 +31,29 @@
         text-align: center;
         cursor: pointer;
 
+        @include mobile {
+          width: 150px;
+          height: 130px;
+        }
+
         img {
           width: 50px;
           height: 50px;
         }
 
-        .line{
+        .line {
           width: 50px;
           height: 2px;
           background-color: lightgray;
-          transition: all .3s ease;
+          transition: all 0.3s ease;
         }
 
         span {
           font-weight: 300;
         }
 
-        &:hover{
-          .line{
+        &:hover {
+          .line {
             width: 80px;
             background-color: #1dbf73;
           }
