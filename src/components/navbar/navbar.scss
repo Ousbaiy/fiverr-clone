@@ -21,6 +21,10 @@
         color: var(--cl-white) !important;
       }
     }
+
+    span {
+      color: var(--cl-pColor);
+    }
   }
 
   .container {
@@ -31,6 +35,7 @@
     .logo {
       font-size: 34px;
       font-weight: bold;
+      display: flex;
 
       .dot {
         color: var(--cl-primary);
@@ -73,7 +78,7 @@
       }
 
       span {
-        @include mobile {
+        @include tablet {
           display: none;
         }
         cursor: pointer;
@@ -89,7 +94,7 @@
         height: 32px;
         cursor: pointer;
 
-        @include mobile {
+        @include tablet {
           display: block;
         }
       }
@@ -191,4 +196,17 @@
       }
     }
   }
+}
+
+
+.sidebar-container {
+  position: relative;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-out;
+}
+
+.sidebar-container.active {
+  width: 250px;
 }

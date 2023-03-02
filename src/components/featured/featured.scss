@@ -81,7 +81,7 @@
             font-size: 16px;
             padding: 10px;
             flex: 1;
-
+            caret-color: var(--cl-primary);
           }
         }
 
@@ -146,5 +146,11 @@
         object-fit: contain;
       }
     }
+  }
+}
+
+@media (max-width: 992px) {
+  .right img {
+    display: none;
   }
 }

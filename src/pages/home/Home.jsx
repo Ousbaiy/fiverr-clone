@@ -9,14 +9,16 @@ import BusinessDesign from "../../components/businessDesign/BusinessDesign";
 import ProjectCard from "../../components/projectCard/ProjectCard";
 import Explore from "../../components/explore/Explore";
 import ScrollToTop from "../../components/ScrollToTop";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 const Home = () => {
   return (
     <div className="home">
       <ScrollToTop />
+      {/* <Sidebar /> */}
       <Featured />
       <TrustedBy />
-      <Slider slidesToShow={5} arrowScroll={4}>
+      <Slider slidesToShow={5} slidesToScroll={5}>
         {cards.map((card) => (
           <CatCard card={card} key={card.id} />
         ))}
@@ -24,7 +26,7 @@ const Home = () => {
       <Services />
       <Explore />
       <BusinessDesign />
-      <Slider slidesToShow={4} arrowScroll={3}>
+      <Slider slidesToShow={4} slidesToScroll={4}>
         {projects.map((card) => (
           <ProjectCard card={card} key={card.id} />
         ))}

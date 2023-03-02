@@ -1,3 +1,4 @@
+@import "../../App.scss";
 .projectCard {
   width: 300px;
   height: 300px;
@@ -6,6 +7,10 @@
   border: 1px solid var(--cl-gray);
   overflow: hidden;
   
+  @include tablet {
+    width: 270px;
+  }
+
 
   img {
     width: 100%;

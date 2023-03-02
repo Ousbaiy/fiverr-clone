@@ -44,3 +44,8 @@ ul {
     @content;
   }
 }
+
+
+body.nav-active {
+  overflow: hidden;
+}

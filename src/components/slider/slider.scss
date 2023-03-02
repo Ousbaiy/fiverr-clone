@@ -1,9 +1,9 @@
+@import "../../App.scss";
 .slider {
   display: flex;
   justify-content: center;
   padding: 10px 0;
   margin: 50px 0;
-
   .carousel-prev, 
   .carousel-next {
     width: 50px;
@@ -19,4 +19,34 @@
       color: var(--cl-black);
     }
   }
+}
+
+@include mobile {
+  .slick-current,
+  .slick-avtive {
+    width: 300px !important;
+  }
+}
+
+.slick-next::before {
+
+  font-size: 30px !important;
+  opacity: 1 !important;
+}
+
+.slick-next::after {
+  font-size: 30px !important;
+  opacity: 1 !important;
+}
+
+.slick-prev {
+  z-index: 5;
+  left: 0 !important;
+}
+.slick-prev::before {
+  font-size: 30px !important;
+  opacity: 1 !important;
+}
+.slick-next {
+  right: 40px !important;
 }

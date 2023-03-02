@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Sidebar from "../sidebar/Sidebar";
 import "./navbar.scss";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
   const [language, setLanguae] = useState(false);
+  const [sidebarActive, setSidebarActive] = useState(false);
   const userRef = useRef(null);
   const { pathname } = useLocation();
 
@@ -32,9 +34,14 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleMenubar = () => {
-    //write code for nav bar
-  }
+  //to stop user from scrollig when the nav is active
+  useEffect(() => {
+    if (sidebarActive) {
+      document.body.classList.add("nav-active");
+    } else {
+      document.body.classList.remove("nav-active");
+    }
+  }, [sidebarActive]);
 
   const currentUser = {
     id: 1,
@@ -49,14 +56,16 @@ const Navbar = () => {
       <div className="container">
         <div className="logo">
           <Link to="/" className="link">
-            <span className="text">fiverr</span>
+            <p className="text">fiverr</p>
           </Link>
           <span className="dot">.</span>
         </div>
         <div className="links">
           <span>Fiverr Business</span>
           <span>Explore</span>
-          <span className="lang" onClick={() => setLanguae(!language)}>English</span>
+          <span className="lang" onClick={() => setLanguae(!language)}>
+            English
+          </span>
           {language && (
             <div className="langOption">
               <span>Deutsch</span>
@@ -106,7 +115,12 @@ const Navbar = () => {
               )}
             </div>
           )}
-          <img className="menu" src="./img/burger-icon.png" alt="burger-icon" onClick={handleMenubar}/>
+          <img
+            className="menu"
+            src="./img/burger-icon.png"
+            alt="burger-icon"
+            onClick={() => setSidebarActive(!sidebarActive)}
+          />
         </div>
       </div>
       {(active || pathname !== "/") && (
@@ -146,6 +160,9 @@ const Navbar = () => {
           <hr />
         </>
       )}
+      <div className={`sidebar-container ${sidebarActive ? "active" : ""}`}>
+        <Sidebar sidebarActive={sidebarActive} />
+      </div>
     </nav>
   );
 };
