@@ -1,7 +1,10 @@
-import React from "react";
 import "./gig.scss";
-import { Slider } from "infinite-react-carousel/lib";
-import ScrollToTop from "../../components/ScrollToTop"
+
+// Scroll to top
+import ScrollToTop from "../../components/ScrollToTop";
+
+// Slider
+import GigSlider from "../../components/gigSlider/gigSlider";
 
 function Gig() {
   return (
@@ -29,20 +32,8 @@ function Gig() {
               <span>5</span>
             </div>
           </div>
-          <Slider slidesToShow={1} arrowsScroll={1} className="slider">
-            <img
-              src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              alt=""
-            />
-            <img
-              src="https://images.pexels.com/photos/1462935/pexels-photo-1462935.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              alt=""
-            />
-            <img
-              src="https://images.pexels.com/photos/1054777/pexels-photo-1054777.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              alt=""
-            />
-          </Slider>
+          <GigSlider />
+
           <h2>About This Gig</h2>
           <p>
             I use an AI program to create images based on text prompts. This

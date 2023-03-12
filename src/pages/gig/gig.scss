@@ -8,9 +8,26 @@
     display: flex;
     gap: 40px;
 
-    @include mobile {
+    @include laptop {
       flex-direction: column;
     }
+
+    
+.swiper {
+  max-width: 600px;
+
+  @include tablet {
+    max-width: 500px;
+  }
+  @include mobile {
+    max-width: 300px;
+  }
+
+  img {
+    max-height: 500px;
+    object-fit: contain;
+  }
+}
 
     .left {
       flex: 2;
@@ -62,16 +79,6 @@
         }
       }
 
-      .slider {
-        display: block;
-        margin: 0;
-
-        img {
-          max-height: 500px;
-          object-fit: contain;
-        }
-      }
-
       h2 {
         font-weight: 400;
         color: var(--cl-heading);
@@ -110,12 +117,12 @@
               display: flex;
               align-items: center;
               gap: 5px;
-    
+
               img {
                 width: 14px;
                 height: 14px;
               }
-    
+
               span {
                 font-size: 13;
                 font-weight: bold;
@@ -206,12 +213,12 @@
             display: flex;
             align-items: center;
             gap: 5px;
-  
+
             img {
               width: 14px;
               height: 14px;
             }
-  
+
             span {
               font-size: 13;
               font-weight: bold;
@@ -251,7 +258,7 @@
       max-height: 500px;
 
       @include mobile {
-        order: 2
+        order: 2;
       }
 
       .price {
@@ -294,7 +301,6 @@
       }
 
       .skills {
-
         .item {
           display: flex;
           align-items: center;
@@ -317,7 +323,7 @@
         font-weight: 500;
         border-radius: 5px;
         cursor: pointer;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
         font-size: 18px;
 
         &:hover {
@@ -327,3 +333,4 @@
     }
   }
 }
+

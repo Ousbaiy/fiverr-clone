@@ -40,7 +40,7 @@ The application includes several key features that replicate the functionality o
 - [Vite](https://vitejs.dev/): A lightweight, fast, and opinionated web development build tool.
 - [React](https://reactjs.org/): A JavaScript library for building user interfaces.
 - [SASS](https://sass-lang.com/): A preprocessor scripting language that is interpreted into Cascading Style Sheets (CSS).
-- [React-slick](https://react-slick.neostack.com/): A carousel component for React.
+- [swiperJs](https://swiperjs.com/): Swiper is the most modern free mobile touch slider with hardware accelerated transitions and amazing native behavior.
 - [ESLint](https://eslint.org/): A static code analysis tool for identifying problematic patterns found in JavaScript code.
 
 

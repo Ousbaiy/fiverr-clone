@@ -15,7 +15,7 @@
     color: lightgray;
     font-weight: 500;
 
-    @include mobile {
+    @include tablet {
       gap: 10px;
     }
 

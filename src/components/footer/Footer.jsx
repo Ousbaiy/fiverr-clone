@@ -1,12 +1,12 @@
+import "./footer.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./footer.scss";
+
+// data
 import { sections } from "../../data";
 
 const Footer = () => {
   const [activeIndex, setActiveIndex] = useState(null);
-
-  
 
   const handleSectionClick = (index) => {
     setActiveIndex(index === activeIndex ? null : index);

@@ -1,62 +1,45 @@
-import React from "react";
 import "./slider.scss";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 
-const slider = ({ children, slidesToShow, slidesToScroll }) => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    arrows: true,
-    speed: 500,
-    slidesToShow: slidesToShow,
-    slidesToScroll: slidesToScroll,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1300,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 830,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-          arrows: false,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 570,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          dots: true
-        }
-      }
-    ]
-  };
+// Library Imports
+import { Swiper } from "swiper/react";
+import { Navigation } from "swiper";
+import "swiper/css/navigation";
+import "swiper/swiper.min.css";
+
+const slider = ({ children, slidesToShow }) => {
   return (
     <div className="slider">
       <div className="container">
-        <Slider {...settings}>
+        <Swiper
+          breakpoints={{
+            400: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: slidesToShow - 1,
+              spaceBetween: 30,
+            },
+            1200: {
+              slidesPerView: slidesToShow ,
+              spaceBetween: 30,
+            },
+          }}
+          navigation={true}
+          modules={[Navigation]}
+          loop={true}
+          className="mySwiper"
+        >
           {children}
-        </Slider>
+        </Swiper>
       </div>
     </div>
   );

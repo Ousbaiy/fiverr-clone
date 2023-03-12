@@ -1,52 +1,25 @@
-@import "../../App.scss";
 .slider {
-  display: flex;
-  justify-content: center;
   padding: 10px 0;
   margin: 50px 0;
-  .carousel-prev, 
-  .carousel-next {
-    width: 50px;
-    height: 50px;
-    background-color: var(--cl-gray);
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    
-    &::before {
-      color: var(--cl-black);
-    }
-  }
 }
 
-@include mobile {
-  .slick-current,
-  .slick-avtive {
-    width: 300px !important;
-  }
-}
-
-.slick-next::before {
-
-  font-size: 30px !important;
-  opacity: 1 !important;
-}
-
-.slick-next::after {
-  font-size: 30px !important;
-  opacity: 1 !important;
-}
-
-.slick-prev {
-  z-index: 5;
-  left: 0 !important;
-}
-.slick-prev::before {
-  font-size: 30px !important;
-  opacity: 1 !important;
-}
-.slick-next {
-  right: 40px !important;
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  background-color: #fff;
+  color: gray;
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-top: -24px;
+  -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+  border: 0;
+  font-size: 18px !important;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
