@@ -23,7 +23,7 @@ const Home = () => {
       <ScrollToTop />
       <Featured />
       <TrustedBy />
-      <Slider slidesToShow={5} slidesToScroll={5}>
+      <Slider slidesToShow={5} >
         {cards.map((card) => (
           <SwiperSlide key={card.id}>
             <CatCard card={card} />
@@ -33,7 +33,7 @@ const Home = () => {
       <Services />
       <Explore />
       <BusinessDesign />
-      <Slider slidesToShow={4} slidesToScroll={4}>
+      <Slider slidesToShow={4} >
         {projects.map((card) => (
           <SwiperSlide key={card.id}>
             <ProjectCard card={card} />

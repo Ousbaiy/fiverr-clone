@@ -1,3 +1,4 @@
+import "./gigslider.scss";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,9 +9,8 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper";
 
-import "./gigslider.scss";
 
-export default function GigSlider() {
+const GigSlider = () => {
   return (
     <div className="slider">
       <Swiper
@@ -42,3 +42,5 @@ export default function GigSlider() {
     </div>
   );
 }
+
+export default GigSlider;
