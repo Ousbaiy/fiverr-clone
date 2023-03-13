@@ -1,6 +1,13 @@
 import "./services.scss";
+import { useState } from "react";
 
 const Services = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <div className="services">
       <div className="container">
@@ -50,7 +57,26 @@ const Services = () => {
           </ul>
         </div>
         <div className="item">
-          <video src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/vmvv3czyk2ifedefkau7" controls></video>
+          {isPlaying ? (
+            <video
+              src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/vmvv3czyk2ifedefkau7"
+              controls
+              autoPlay
+            ></video>
+          ) : (
+            <div className="video-placeholder">
+              <img
+                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_700,dpr_1.0/v1/attachments/generic_asset/asset/089e3bb9352f90802ad07ad9f6a4a450-1599517407052/selling-proposition-still-1400-x1.png"
+                alt="Video Thumbnail"
+              />
+              <a onClick={handlePlay} role="button" aria-label="play video">
+                <img
+                  src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/desktop-play-button.c1196d6.png"
+                  alt="Play Icon"
+                />
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </div>

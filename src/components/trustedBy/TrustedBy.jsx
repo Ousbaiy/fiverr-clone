@@ -6,8 +6,8 @@ const TrustedBy = () => {
       <div className="container">
         <span>Trusted by:</span>
         <img
-          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/facebook.543cf10.png"
-          alt="Facebook"
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/meta.8a23b13.png"
+          alt="Meta"
         />
         <img
           src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/google.aaaa0ad.png"
