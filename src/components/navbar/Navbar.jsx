@@ -1,7 +1,9 @@
+import "./navbar.scss";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+
+// components
 import Sidebar from "../sidebar/Sidebar";
-import "./navbar.scss";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -67,14 +69,15 @@ const Navbar = () => {
             English
           </span>
           {language && (
-            <div className="langOption">
-              <span>Deutsch</span>
-              <span>Español</span>
-              <span>Francais</span>
-              <span>Português</span>
-              <span>Italiano</span>
-              <span>Nederlands</span>
-            </div>
+            <ul className="langOption">
+              <li>English<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M13.6202 2.6083L5.4001 10.8284L2.37973 7.80805C2.23329 7.66161 1.99585 7.66161 1.84939 7.80805L0.96551 8.69193C0.819073 8.83836 0.819073 9.0758 0.96551 9.22227L5.13492 13.3917C5.28135 13.5381 5.51879 13.5381 5.66526 13.3917L15.0344 4.02252C15.1809 3.87608 15.1809 3.63865 15.0344 3.49218L14.1505 2.6083C14.0041 2.46186 13.7667 2.46186 13.6202 2.6083Z"></path></svg></li>
+              <li>Deutsch</li>
+              <li>Español</li>
+              <li>Francais</li>
+              <li>Português</li>
+              <li>Italiano</li>
+              <li>Nederlands</li>
+            </ul>
           )}
           {!currentUser?.isSeller && <span>Become a Seller</span>}
           {!currentUser && <span>Sign in</span>}
