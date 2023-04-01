@@ -4,7 +4,7 @@ import "./gig.scss";
 import ScrollToTop from "../../components/ScrollToTop";
 
 // Slider
-import GigSlider from "../../components/gigSlider/gigSlider";
+import GigSlider from "../../components/gigSlider/GigSlider"
 
 function Gig() {
   return (
@@ -24,11 +24,11 @@ function Gig() {
             />
             <span>Anna Bell</span>
             <div className="stars">
-              <img src="/img/star.png" alt="" />
-              <img src="/img/star.png" alt="" />
-              <img src="/img/star.png" alt="" />
-              <img src="/img/star.png" alt="" />
-              <img src="/img/star.png" alt="" />
+              <img src="/img/star.png" alt="star" />
+              <img src="/img/star.png" alt="star" />
+              <img src="/img/star.png" alt="star" />
+              <img src="/img/star.png" alt="star" />
+              <img src="/img/star.png" alt="star" />
               <span>5</span>
             </div>
           </div>
