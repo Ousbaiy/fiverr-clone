@@ -45,13 +45,13 @@ const Navbar = () => {
     }
   }, [sidebarActive]);
 
-  // const currentUser = {
-  //   id: 1,
-  //   username: "Malich",
-  //   isSeller: true,
-  // };
+  const currentUser = {
+    id: 1,
+    username: "Malich",
+    isSeller: true,
+  };
 
-  const currentUser = null;
+  // const currentUser = null;
 
   return (
     <nav className={active || pathname !== "/" ? "navbar active" : "navbar"}>

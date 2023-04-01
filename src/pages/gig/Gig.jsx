@@ -32,7 +32,7 @@ function Gig() {
               <span>5</span>
             </div>
           </div>
-          {<GigSlider />}
+          <GigSlider />
           <h2>About This Gig</h2>
           <p>
             I use an AI program to create images based on text prompts. This
